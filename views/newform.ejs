@@ -1,0 +1,54 @@
+<%layout("/layouts/boilerplate")%>
+<div class="row">
+    <div class="col-8 offset-2">
+ <h3>Enter Details for New Listing</h3>
+<br><br>
+
+    <form method="post" action="/listings" novalidate class="needs-validation">
+        <div class="mb-3">
+             <label for="title" class="form-label">Title</label>
+           
+          <input type="text" name="listing[title]" required placeholder="Add Listing Catchy title" class="form-control" required>
+         <div class="valid-feedback">Title looks good</div>
+        </div>
+       
+        <div class="mb-3"><label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" placeholder="enter description" class="form-control" required></textarea>
+             
+         </div>
+    
+        <div class="mb-3">
+            <label for="image" class="form-label">Image url</label>
+            <input type="text" name="listing[image]" placeholder="enter image url" class="form-control">
+        </div>
+
+
+
+
+
+ <div class="row">
+        <div class="mb-3 col-md-4"><label for="price" class="form-label">Enter Price</label>
+    <input  name="listing[price]" placeholder="enter price " type="number" class="form-control" required>
+</div>
+
+<div class="mb-3 col-md-8"><label for="country" class="form-label">Country</label>
+    <input type="text" name="listing[country]" placeholder="enter country" class="form-control" required>
+</div>
+   </div>
+
+
+
+
+
+
+<div class="mb-3"><label for="location" class="form-label">Location</label>
+    <input type="text" name="listing[location]" placeholder="enter location" class="form-control" required>
+</div>
+<br><br>
+<button type="submit" class="btn btn-danger">submit</button>
+<br>
+<br>
+    </form>
+    </div>
+    </div>
+
