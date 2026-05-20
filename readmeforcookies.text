@@ -1,0 +1,41 @@
+👉How to Send Cookies?
+in Express
+app.get("/setcookies", (req, res) => {
+res.cookie("greet", "namaste");
+res.cookie("origin", "India");
+res.send("We sent you a cookie!"); });
+
+ro
+👉Cookie Parser -an npm package allows to access cookies
+cookie-parser package
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
+app.get("/getcookies", (req, res) {
+console.dir(req.cookies);
+res.send("got the cookies!");
+});
+app.get("/getcookies", (req, res) => {
+let { name = "anonymous"midadreg.cookies@gmail.com
+res.send(Hi, ${name}`);
+});
+
+
+In Express, signed cookies are cookies that are digitally signed so the server can detect if someone has tampered with them.
+
+👉 Normal cookie = can be modified by user
+👉 Signed cookie = modification is detected (becomes invalid)
+How it works (simple idea)
+
+When you sign a cookie:
+
+Express adds a signature using a secret key
+When the cookie comes back, Express verifies the signature
+If changed → value becomes false (invalid)
+
+
+👉Signed Cookies
+Send Signed Cookie
+app.use(cookieParser ("secretcode"));
+app.get("/getsignedcookie", (req, res) => { }); res.cookie("color", "red", { signed: true }); res.send("done!");
+Verify Signed Cookie
+app.get("/verify", (req, res) ☐ res.send(req.signedCookies); }); {
