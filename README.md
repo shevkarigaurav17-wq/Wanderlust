@@ -1,13 +1,12 @@
 # Wander Lust
 
-A Node.js/Express application for listing, reviewing, and managing travel destinations. Users can sign up, log in, create listings, and leave reviews. Built with MongoDB, EJS templates, and Mapbox integration for geocoding.
+A Node.js/Express application for listing, reviewing, and managing travel destinations. Users can sign up, log in, create listings, and leave reviews. Built with MongoDB, EJS templates.
 
 ## Features
 
 - User authentication (sign up, log in)
 - CRUD operations for listings
 - Reviews with ratings
-- Geolocation using Mapbox
 - Responsive UI with EJS layouts
 
 ## Installation
